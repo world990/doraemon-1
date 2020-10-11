@@ -43,17 +43,7 @@
   transform: translateX(-38px);
 }
 /* 再来画两颗黑色的眼珠 */
-.eye.left::before {
-  content: "";
-  display: block;
-  background: black;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  position: absolute;
-  left: 10px;
-  top: 40px;
-}
+.eye.left::before,
 .eye.right::before {
   content: "";
   display: block;
@@ -62,8 +52,13 @@
   height: 14px;
   border-radius: 50%;
   position: absolute;
-  left: 50px;
   top: 40px;
+}
+.eye.left::before {
+  left: 10px;
+}
+.eye.right::before {
+  left: 50px;
 }
 /* 接下来轮到一张大白脸 */
 .head .face {
@@ -98,64 +93,40 @@
   width: 10px;
 }
 /* 接下来是胡须*/
-
-.head .face .whisker .zuo {
+.whisker > div {
   position: absolute;
   width: 80px;
   height: 2px;
   border: 1px solid black;
   left: 50%;
+}
+.head .face .whisker .zuo {
   margin-left: -116px;
   top: 110px;
 }
 .head .face .whisker .ul {
-  position: absolute;
-  width: 80px;
-  height: 2px;
-  border: 1px solid black;
-  left: 50%;
   margin-left: -113px;
   top: 80px;
-  -webkit-transform: rotate(25deg);
+  transform: rotate(25deg);
 }
 .head .face .whisker .ld {
-  position: absolute;
-  width: 80px;
-  height: 2px;
-  border: 1px solid black;
-  left: 50%;
   margin-left: -113px;
   top: 140px;
-  -webkit-transform: rotate(-25deg);
+  transform: rotate(-25deg);
 }
 .head .face .whisker .right {
-  position: absolute;
-  width: 80px;
-  height: 2px;
-  border: 1px solid black;
-  left: 50%;
   margin-left: 39px;
   top: 110px;
 }
 .head .face .whisker .ru {
-  position: absolute;
-  width: 80px;
-  height: 2px;
-  border: 1px solid black;
-  left: 50%;
   margin-left: 37px;
   top: 80px;
-  -webkit-transform: rotate(-25deg);
+  transform: rotate(-25deg);
 }
 .head .face .whisker .rd {
-  position: absolute;
-  width: 80px;
-  height: 2px;
-  border: 1px solid black;
-  left: 50%;
   margin-left: 37px;
   top: 140px;
-  -webkit-transform: rotate(25deg);
+  transform: rotate(25deg);
 }
 .noseLine {
   position: absolute;
